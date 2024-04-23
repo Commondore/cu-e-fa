@@ -3,6 +3,7 @@ import { GAME_PARAMS } from "@/data/data.js";
 import { randomArrayItem } from "@/utils/random";
 import Result from "@/components/Result/Result";
 import Board from "@/components/Board/Board";
+import { AnimatePresence } from "framer-motion";
 
 const App = () => {
   const [result, setResult] = useState("");
@@ -31,7 +32,9 @@ const App = () => {
   };
 
   return result ? (
-    <Result result={result} user={userChoice} comp={compChoice} again={() => setResult("")} />
+    <AnimatePresence>
+      <Result result={result} user={userChoice} comp={compChoice} again={() => setResult("")} />
+    </AnimatePresence>
   ) : (
     <Board choice={onUserChoice} wins={wins} loses={fails} />
   );
