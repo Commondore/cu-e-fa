@@ -1,0 +1,20 @@
+:root {
+  --winColor: #ffb800;
+  --loseColor: #00f0ff;
+  --font: "Roboto Mono", sans-serif;
+  --color: #000;
+  --maxWidth: 1100px;
+  --gutter: 15px;
+}
+
+body {
+  font: 1rem/1.2 var(--font);
+  color: var(--color);
+  margin: 0;
+}
+
+.container {
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: var(--gutter);
+}

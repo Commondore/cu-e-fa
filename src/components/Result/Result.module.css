@@ -1,0 +1,67 @@
+.result {
+  position: relative;
+  min-height: 100vh;
+}
+
+.win {
+  background: linear-gradient(80deg, var(--winColor) 50%, #fff 50%);
+}
+.lose {
+  background: linear-gradient(-80deg, var(--loseColor) 50%, #fff 50%);
+}
+.draw {
+  background: linear-gradient(90deg, var(--winColor) 50%, var(--loseColor) 50%);
+}
+.drawMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3rem 6rem;
+  background: var(--color);
+  color: white;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+.btn {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid var(--color);
+  background: transparent;
+  padding: 1rem 4rem;
+  color: var(--color);
+  font-family: var(--font);
+  font-weight: bold;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn:hover {
+  background: var(--color);
+  color: white;
+}
+
+.user {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.comp {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.comp img {
+  transform: scaleX(-1);
+}
+.title {
+  margin-bottom: 4rem;
+  font-size: 2em;
+}
